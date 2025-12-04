@@ -73,11 +73,14 @@ nav a {
 
 /* Hero Section */
 .hero {
-    height: 200px;
+    height: 210px;
     background: url("./images/hero1.png") center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
+
+     -webkit-mask-image: linear-gradient(to bottom, white 60%, transparent 100%);
+
 }
 
 .content {
