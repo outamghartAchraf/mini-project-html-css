@@ -239,9 +239,48 @@ nav a {
 
 .testimonials-flex{
     display: flex;
-    justify-content: center;
     gap: 30px;
+    overflow-x: auto;              
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+    scrollbar-width: none;
 }
+
+.testimonials-flex::scroll-button(right),
+.testimonials-flex::scroll-button(left) {
+    border: none;
+    background-color: rgb(73, 3, 138);
+    font-family: Consolas;
+    font-size: 2rem;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+         
+    margin: 0 10px;
+}
+
+ 
+.testimonials-flex::scroll-button(left) {
+    content: '←';
+}
+
+ 
+.testimonials-flex::scroll-button(right) {
+    content: '→';
+}
+
+ 
+.testimonials-flex::scroll-button(left):disabled,
+.testimonials-flex::scroll-button(right):disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+
+
 
 .testimonial-card{
     background: linear-gradient(135deg, #4a7fc1 0%, #667eea 100%);
@@ -249,6 +288,8 @@ nav a {
     border-radius: 20px;
     color: white;
     text-align: left;
+    min-width: 400px;
+    scroll-snap-align: start;
 }
 
 .testimonial-text {
@@ -278,7 +319,7 @@ nav a {
 
 .testimonials-flex{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
 }
 
@@ -289,6 +330,20 @@ nav a {
    margin-bottom: 40px;
    color: #1e3a5f;
 }
+
+.testimonials{
+    padding: 40px 30px;
+    background: #f0f4fa;
+   padding-top: 40px;
+    
+}
+
+.testimonial-card{
+
+    min-width: 300px;
+   
+}
+
 
 
 }
